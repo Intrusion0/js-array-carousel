@@ -3,3 +3,87 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Container */
+.container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.container_carousel {
+    width: 100%;
+    display: flex;
+    /* debug */
+    height: 500px;
+}
+
+.main_picture {
+    height: 100%;
+    position: relative;
+    /* display: none; */
+    width: 80%;
+}
+
+.text {
+    text-align: end;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    color: white;
+    font-size: 22px;
+}
+
+.picture {
+    height: 100%;
+    width: 100%;
+}
+
+.picture img, .thumb img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.thumbs {
+    height: calc(100% / 5);
+    width: 20%;
+    position: relative;
+}
+
+.thumb {
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.prev, .next {
+    height: 25px;
+    text-align: center;
+    background-color: rgb(203, 208, 212);
+    width: 25px;
+    line-height: 25px;
+    border-radius: 100%;
+    z-index: 10;
+    position: absolute;
+    left: calc(255px / 2);
+    cursor: pointer;
+}
+
+.prev {
+    top: 10px;
+}
+
+.next {
+    top: 465px;
+}
+
+/* ACTIVE */
+.active {
+    display: block;
+    border: 2px solix lightgray;
+    opacity: 1;
+}
+
