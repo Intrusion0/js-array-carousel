@@ -66,13 +66,19 @@ let contPos = 0;
 nextThumb.addEventListener('click',
     function() {
 
-        ++contPos
+        if (contPos < items.length - 1) {
+            ++contPos;
+        } else {
+            contPos = 0;
+        }
 
         document.querySelector(".picture.active").classList.remove("active");
         document.getElementsByClassName("picture") [contPos].classList.add("active");
 
         document.querySelector(".thumb.active").classList.remove("active");
         document.getElementsByClassName("thumb") [contPos].classList.add("active");
+
+        
     }
 )
 
@@ -82,7 +88,11 @@ let prevThumb = document.querySelector(".prev");
 prevThumb.addEventListener('click',
     function() {
 
-        --contPos
+        if (contPos === 0) {
+            contPos = items.length - 1;
+        } else {
+            --contPos;
+        }
 
         document.querySelector(".picture.active").classList.remove("active");
         document.getElementsByClassName("picture") [contPos].classList.add("active");
